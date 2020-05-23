@@ -1,0 +1,187 @@
+.contenedor{
+    width: 50%;
+    /*margin: auto;*/ /*Lo centra en la pantalla */
+    position: fixed;
+    bottom: 25%;
+    right: 25%;
+    border-radius: 5%;
+    background-color: rgb(210, 226, 139);
+    padding: 20px;
+    animation-name: aparecer;
+    animation-duration: 4s;
+    /*         ancho alto radio_som radio_pro color/opc */
+    box-shadow: 19px 10px 20px 0px rgba(0,0,0,0.40);
+    /* cambio los valores a 20px 20px 10px 0px*/
+    /*-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;*/
+    /*
+    box-sizing: border-box; /* Todo lo extra se consume para adentro del componente */
+}
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.bCerrar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /*
+    background-color:  yellow;
+    height: 80px;
+    */
+}
+.tituloH2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+}
+.cerrar{
+    background-color: red;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* tabla */
+table{
+    
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td{
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){
+    background-color: #7088bb;
+    color: white;
+}
+
+th{
+    background-color: rgb(211, 171, 39);
+    color: rgb(20, 20, 20);
+}
+/* Fin tabla*/
+
+input[type=text],input[type=number],input[type=date]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    
+    border-radius: 4px;
+    box-sizing: border-box; /*Hace crecer el componente para que no se rompa*/
+}
+
+input[type=button]{
+    width: 30%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+input[type = button]:hover{
+    background-color: salmon;
+}
+#btnElininar{
+    background-color: #e62c14;
+}
+input[type=reset]{
+    width: 30%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 0 0;
+    border: none;
+    cursor: pointer;
+}
+
+input[type = reset]:hover{
+    background-color: salmon;
+}
+
+.sinError{
+    border: 1px solid #cccccc;
+}
+
+.error{
+    border: 1px solid red;
+}
+
+.contenedorTabla{
+    position: relative;
+}
+
+#contenedor1 {
+    display: flex;
+    background-color: #ddd;
+    height: 10vh;
+    top: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#contenedor2 {
+    display: flex;
+    background-color: rgb(170, 216, 170);
+    height: 10vh;
+    top: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+*,*:after, *:before{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#contenedor_carga{
+    background-color: rgba(250,240,2450,0.9);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 10000;
+}
+
+#carga{
+    border: 15px solid #ccc;
+    border-top-color: #F4266A;
+    border-top-style: groove;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    animation: girar 1.5s linear infinite;
+}
+
+@keyframes girar{
+    from { transform: rotate(0deg);}
+    to { transform: rotate(360deg);}
+}

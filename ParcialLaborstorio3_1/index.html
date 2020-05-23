@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<htnl>
+    <head>
+        <meta charset="UTF-8">
+        <title>Laboratorio III - Primer Parcial</title>
+
+	    <link rel="stylesheet" type="text/css" href="./css/jsonEstilos.css">
+        <script type="text/javascript" src="./js/jsonFunciones.js" ></script>        
+    </head>
+    <body>
+            <button id="btn" onclick="abrir();" hidden>Agregar</button> 
+
+            <div id="contAgregar" class="contenedor" hidden> 
+            <form name=formulario>
+                <div class="bCerrar" id="contenedor1">
+                    <div class="tituloH2" >
+                        <h2>FORMULARIO</h2>
+                    </div>
+                    <div>
+                        <button id="btnCerrar" class="cerrar" onclick="cerrar();">x</button>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <input type="hidden" id="id" class="sinError" name="idname" disabled></input>
+                <br>
+                <label for="name">Nombre</label>
+                <br>
+                <input type="text" id="name" class="sinError" name="NameNombre" placeholder="Nombre Materia minimo 6 caracteres ..." minlength="6" required></input>
+                <br>
+                <label for="cuatrimestre">Cuatrimestre</label>
+                <br>
+                <input type="hidden" id="cuatrimestre" class="sinError" name="cuatrimestreNombre" placeholder="Cuatrimestre" ></input>
+                <br>
+                <select id="Scuatrimestre" name="cuatrimestre" disabled>
+                    <option value="1">1</option>
+                    <option value="1">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <br>
+                <input type="date" id="idfecha" class="sinError" name="fecha" placeholder="Fecha ..." max="22/05/2020" ></input> <!--max="2020-05-21"-->
+                <br>
+                
+                <br>
+                <input type="hidden" id="idTurno" class="sinError" name="turno" placeholder="turno" hidden></input>
+                <br>
+
+                <div id='radiobuttonset'>
+                    <label class="sinError" for="myradio_1">Mañana</label>
+                    <input class="sinError" type="radio" name="radiobutton" id="myradio_1" value="Mañana" >
+                    <label class="sinError" for="myradio_2">Noche</label>
+                    <input class="sinError" type="radio" name="radiobutton" id="myradio_2" value="Noche">
+                    
+                </div>
+
+                <br>
+                <div id="contenedor2">
+                    <!-- <input type="button" value="Guardar" onclick="agregar();"></input>-->
+                    <input type="button" value="Modificar" id = "btnModificar">
+                    <input type="button" value="Eliminar" id = "btnElininar" onclick="eliminar();">
+                    <!--<input type="button" value="Eliminar" id = "btnEliminar">-->
+                    <!--<input type="reset"  value="Limpiar" onclick="limpiar()"></input>-->
+                </div>
+            </form>    
+            </div> 
+            <!--Fin contenedor-->
+            
+
+            <!-- Armo Tabla -->  
+
+            <h2>LISTA DE MATERIAS</h2>
+            <table id="tabla">
+                <thead>
+                    <tr>
+                        <th hidden>id</th>
+                        <th>NOMBRE</th>
+                        <th>CUATRIMESTRE</th>
+                        <th>FECHA FINAL</th>
+                        <th>TURNO</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+            <!--Fin tabla-->           
+    </body>
+</htnl>
